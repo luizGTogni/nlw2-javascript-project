@@ -49,11 +49,9 @@ O layout da aplicação está disponível no Figma:
 
 ### Web
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/web.svg" width="400px">
-
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/sucesso-web.svg" width="400px">
-</p>
+<h4 align="center">
+  <strong>:construction: Em construção... :construction:</strong>
+</h4>
 
 ## 🛠 Tecnologias
 
