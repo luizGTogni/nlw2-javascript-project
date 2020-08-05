@@ -1,0 +1,4 @@
+#page-give-classes #container {
+    height: 100vh; /* 100% em relação a tamanho máximo proposto */
+    width: 100vw;
+}
