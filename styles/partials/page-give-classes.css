@@ -1,4 +1,46 @@
+/* Mobile */
 #page-give-classes #container {
     height: 100vh; /* 100% em relação a tamanho máximo proposto */
     width: 100vw;
+}
+
+#page-give-classes main {
+    width: 100%;
+    max-width: 74rem;
+    margin: -3.2rem auto 3.2rem;
+
+    background-color: var(--color-box-base);
+    
+    border-radius: .8rem;
+
+    padding-top: 6.4rem;
+}
+
+#page-give-classes fieldset {
+    border: none;
+
+    padding: 0 2.4rem;
+}
+
+#page-give-classes fieldset legend {
+    width: 100%;
+    margin-bottom: 2.4rem;
+
+    color: var(--color-text-title);
+    font: 700 2.4rem Archivo;
+
+    border-bottom: 1px solid var(--color-line-in-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 1.6rem;
+}
+
+/* Desktop */
+@media (min-width: 700px) {
+    #page-give-classes #container {
+        max-width: 100vw;
+    }
 }
