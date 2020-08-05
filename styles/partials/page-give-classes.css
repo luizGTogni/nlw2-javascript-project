@@ -4,6 +4,10 @@
     width: 100vw;
 }
 
+#page-give-classes .page-header .header-content {
+    margin-bottom: 6.4rem;
+}
+
 #page-give-classes main {
     width: 100%;
     max-width: 74rem;
@@ -36,6 +40,16 @@
     justify-content: space-between;
 
     padding-bottom: 1.6rem;
+}
+
+#page-give-classes fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#page-give-classes .input-block+.input-block,
+#page-give-classes .input-block+.textarea-block,
+#page-give-classes .select-block+.input-block {
+    margin-top: 2.4rem;
 }
 
 /* Desktop */
