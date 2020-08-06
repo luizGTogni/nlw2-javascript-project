@@ -121,7 +121,7 @@
     display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer .button {
     height: 5.6rem;
     width: 20rem;
     margin-left: 1.6rem;
@@ -144,7 +144,7 @@
     transition: background .2s;
 }
 
-.teacher-item footer button:hover {
+.teacher-item footer .button:hover {
     background-color: var(--color-secondary-dark);
 }
 
@@ -212,7 +212,7 @@
         display: initial;
     }
 
-    .teacher-item footer button {
+    .teacher-item footer .button {
         width: 245px;
 
         font-size: 16px;
@@ -220,7 +220,7 @@
         justify-content: center;
     }
     
-    .teacher-item footer button img {
+    .teacher-item footer .button img {
         margin-right: 16px;
     }
 }
