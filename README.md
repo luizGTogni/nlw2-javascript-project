@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="Logo do projeto" src="./images/banners/banner.png" />
+  <img alt="Logo do projeto" src="./public/images/banners/banner.png" />
   
 </h1>
 
