@@ -3,6 +3,7 @@ const Database = require("./database/db");
 
 // Importar os dados e a função
 const { subjects, weekdays, getSubject, convertHoursToMinutes } = require("./utils/format");
+const { queryAll, queryFilters } = require("./database/query");
 
 function pageLanding(req, res) {
     return res.render("index.html");
@@ -10,32 +11,41 @@ function pageLanding(req, res) {
 
 async function pageStudy(req, res) {
     const filters = req.query;
+    const hasFilters = !filters.subject || !filters.weekday && !filters.time;
 
-    if (!filters.subject || !filters.weekday || !filters.time) {
-        return res.render("study.html", { filters, subjects, weekdays });
+    if (hasFilters) {
+        // Caso haja erro na hora da consulta do banco de dados
+        try {
+            const db = await Database;
+            const proffys = await db.all(queryAll);
+
+            // Mudar a máteria de número para o nome dela
+            proffys.map((proffy) => {
+                proffy.subject = getSubject(proffy.subject);
+            });
+
+            return res.render("study.html", { proffys, subjects, filters, weekdays });
+        } catch (err) {
+            console.log(err);
+        }
+
+        //return res.render("study.html", { filters, subjects, weekdays });
     }
-
     // Converter horas em minutos
     const timeToMinutes = convertHoursToMinutes(filters.time);
-    const query = `
-        SELECT classes.*, proffys.*
-        FROM proffys
-        JOIN classes ON (classes.proffy_id = proffys.id)
-        WHERE EXISTS (
-            SELECT class_schedule.*
-            FROM class_schedule
-            WHERE class_schedule.class_id = classes.id
-            AND class_schedule.weekday = ${filters.weekday}
+    let = timeQuery = ``;
+
+    if (!!filters.time) {
+        timeQuery = `
             AND class_schedule.time_from <= ${timeToMinutes}
             AND class_schedule.time_to > ${timeToMinutes}
-        )
-        AND classes.subject = "${filters.subject}"
-    `
-
+        `
+    }
+    
     // Caso haja erro na hora da consulta do banco de dados
     try {
         const db = await Database;
-        const proffys = await db.all(query);
+        const proffys = await db.all(queryFilters(filters));
 
         // Mudar a máteria de número para o nome dela
         proffys.map((proffy) => {
