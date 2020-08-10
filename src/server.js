@@ -24,6 +24,4 @@ server
 .get("/give-classes", pageGiveClasses)
 .post("/save-classes", saveClasses)
 // Iniciar o servidor
-.listen(3000, () => {
-    console.log("Server Started");
-});
+.listen(process.env.PORT || 3000);
