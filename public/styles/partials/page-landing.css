@@ -89,9 +89,13 @@
     margin-left: 0.8rem;
 }
 
-@media (max-width: 699px) { /* Estilo no máximo se a largura for 669px */
+@media (max-width: 1100px) { /* Estilo no máximo se a largura for 669px */
     :root {
         font-size: 40%;
+    }
+
+    .hero-image {
+        height: 45rem;
     }
 }
 
