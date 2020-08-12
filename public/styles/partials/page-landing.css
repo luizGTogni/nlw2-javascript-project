@@ -8,6 +8,7 @@
 
 .logo-container { /* Estilo do container da logo */
     margin-bottom: 3.2rem;
+
     text-align: center;
 }
 
@@ -16,11 +17,11 @@
 }
 
 .logo-container h2 { /* Estilo do subtítulo dentro da container logo */
+    margin-top: 0.8rem;
+
     font-weight: 500;
     font-size: 3.6rem;
     line-height: 4.6rem;
-
-    margin-top: 0.8rem;
 }
 
 .hero-image { /* Estilo da imagem principal */
@@ -31,19 +32,19 @@
     display: flex; /* Display flexível */
     justify-content: center; /* Justifica o conteúdo em relação ao flex */
     
-    margin: 3.2rem 0px;
+    margin: 4.6rem 0;
 }
 
 .buttons-container a { /* Estilo dos links dentro do container de CTAs */
-    width: 30rem;
     height: 10.4rem;
-
-    border-radius: 0.4rem;
+    width: 30rem;
     margin-right: 1.6rem;
 
     font: 700 2.4rem Archivo;
     text-decoration: none;
     color: var(--color-button-text);
+    
+    border-radius: 0.4rem;
 
     display: flex; /* Display flexível */
     align-items: center;  /* Alinha os itens em relação ao flex */

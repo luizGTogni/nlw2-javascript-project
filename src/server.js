@@ -3,7 +3,7 @@ const express = require("express");
 const server = express();
 
 // Importar as pages
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require("./pages");
+const { pageLanding, pageStudy, pageSuccessProffy, pageGiveClasses, saveClasses } = require("./pages");
 
 // Configurar Nunjucks (Template Engine)
 const nunjucks = require("nunjucks");
@@ -21,6 +21,7 @@ server
 // Rotas da aplicação
 .get("/", pageLanding)
 .get("/study", pageStudy)
+.get("/success-proffy", pageSuccessProffy)
 .get("/give-classes", pageGiveClasses)
 .post("/save-classes", saveClasses)
 // Iniciar o servidor

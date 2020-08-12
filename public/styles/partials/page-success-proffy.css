@@ -1,0 +1,87 @@
+#page-success-proffy {
+    background-image: url(/images/success-background.svg);
+    background-size: 100%;
+    background-position: center;
+    background-color: var(--color-primary);
+}
+
+#page-success-proffy #container {
+    color: var(--color-text-in-primary);
+}
+
+.success-container {
+    margin-bottom: 3.2rem;
+
+    text-align: center;
+}
+
+.success-container img {
+    height: 11rem;
+}
+
+.success-container h1 {
+    margin: 0.8rem auto;
+
+    color: var(--color-title-in-primary);
+    font-size: 3.6rem;
+    line-height: 4.6rem;
+}
+
+.success-container p {
+    color: var(--color-text-in-primary);
+    font: 500 1.6rem Archivo;
+    line-height: 2.6rem;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+
+    margin: 4.6rem 0;
+}
+
+.buttons-container a {
+    height: 5.6rem;
+    width: 17.6rem;
+
+    border-radius: 0.8rem;
+
+    cursor: pointer;
+
+    font: 700 1.8rem Archivo;
+    text-decoration: none;
+    color: var(--color-button-text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background .2s;
+}
+
+.buttons-container a.list-proffys {
+    background-color: var(--color-secondary);
+}
+
+.buttons-container a.list-proffys:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+@media (min-width: 1100px) {
+    #page-success-proffy {
+        background-repeat: no-repeat;
+        background-size: 70%;
+    }
+
+    .success-container img {
+        height: 12.8rem;
+    }
+
+    .success-container h1 {
+        font-size: 4rem;
+    }
+
+    .success-container p {
+        font-size: 1.8rem;
+    }
+}

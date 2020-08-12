@@ -58,6 +58,10 @@ async function pageStudy(req, res) {
     }
 }
 
+function pageSuccessProffy(req, res) {
+    return res.render("success-proffy.html");
+}
+
 function pageGiveClasses(req, res) {
     return res.render("give-classes.html", { subjects, weekdays });
 }
@@ -93,7 +97,7 @@ async function saveClasses(req, res) {
         queryString += "&weekday=" + req.body.weekday[0];
         queryString += "&time=" + req.body.time_from[0];
 
-        return res.redirect("/study" + queryString);
+        return res.redirect("/success-proffy" + queryString);
     } catch (err) {
         console.log(err);
     }
@@ -103,6 +107,7 @@ async function saveClasses(req, res) {
 module.exports = {
     pageLanding,
     pageStudy,
+    pageSuccessProffy,
     pageGiveClasses,
-    saveClasses
+    saveClasses,
 }
