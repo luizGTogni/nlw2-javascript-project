@@ -25,7 +25,7 @@
 🧑‍🏫 Proffy - É uma plataforma de estudos online para quem procura um professor particular ou mesmo para um professor que ganhar uma renda extra com aulas particulares.
 
 ### Os usuários que querem encontrar um professor devem:
-Encontrar um professor na página de <a href="https://project-proffy.vercel.app/study.html" target="_blank">Procura de professores</a> e depois entrar em contato pelo whatsapp dele que está na plataforma.
+Encontrar um professor na página de <a href="https://nlw2-project-javascript.herokuapp.com/" target="_blank">Procura de professores</a> e depois entrar em contato pelo whatsapp dele que está na plataforma.
 
 ### Os usuários que querem trabalhar na plataforma web devem enviar:
 - Nome Completo
@@ -34,7 +34,7 @@ Encontrar um professor na página de <a href="https://project-proffy.vercel.app/
 - Uma biografia sobre ele(a) e sua experiência como professor(a)
 - A máteria que deseja dar aula
 - Custo por horas ou aulas
-- E os horários dispovíveis por ele/ela
+- E os horários disponíveis por ele/ela
 
 Projeto desenvolvido durante a **NLW - Next Level Week #2** oferecida pela [Rocketseat](https://rocketseat.com.br/).
 O NLW é uma experiência online com muito conteúdo prático, desafios e hacks onde o conteúdo fica disponível durante uma semana.
@@ -47,12 +47,6 @@ O layout da aplicação está disponível no Figma:
   <img alt="Made by LuizGTogni" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
-### Web
-
-<h4 align="center">
-  <strong>:construction: Em construção... :construction:</strong>
-</h4>
-
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -60,6 +54,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - CSS
 - HTML
 - JAVASCRIPT
+- NODEJS
 
 ## 🚀 Como executar o projeto
 
@@ -73,7 +68,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 [Git](https://git-scm.com). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
-### 🧭 Rodando a aplicação web (Front End)
+### 🧭 Rodando a aplicação web
 
 ```bash
 # Clone este repositório
@@ -82,11 +77,10 @@ $ git clone https://github.com/luizGTogni/nlw2-javascript-project/
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd nlw2-javascript-project
 
-# Instale a extensão live server
+# Executando o servidor
+$ npm start
 
-# Inicie o live server
-
-# A aplicação será aberta na porta:5500 - acesse http://localhost:5500
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 ## 😯 Como contribuir para o projeto
 
