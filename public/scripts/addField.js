@@ -1,22 +1,44 @@
-// Procurar o botão na DOM
 const btnAddField = document.querySelector("#add-time");
-// Procurar o fieldset schedule items
 const scheduleItems = document.querySelector("#schedule-items");
 
-// Adiciona um evento quando clicar no botão
-btnAddField.addEventListener("click", () => { addField(); });  
+btnAddField.addEventListener("click", () => { 
+    checkField();
+});  
 
-// Função criar um campo field
-function addField() {
-    // Copiar o schedule Item
-    const newScheduleItem = document.querySelector('.schedule-item').cloneNode(true);
-    //Limpar os campos
-    const scheduleItem = newScheduleItem.querySelectorAll('input');
-    // Percorrer cada campo do schedule item
+function checkField() {
+    // Get last element do schedule items
+    const scheduleItemElement = getLastElement();
+    const scheduleField = scheduleItemElement.querySelectorAll("select, input");
+    const fields = getValueField(scheduleField);
+
+    const hasValue = fields[0] !== "" && fields[1] !== "" && fields[2] !== "";
+
+    if (hasValue) {
+        addField();
+    }
+}
+
+function getLastElement() {
+    return scheduleItems.lastElementChild;
+}
+
+function getValueField(scheduleField) {
+    let fields = [];
+    scheduleField.forEach((field) => {
+        fields.push(field.value);
+    });
+    return fields;
+}
+
+function clearField(newScheduleItem) {
+    const scheduleItem = newScheduleItem.querySelectorAll("input");
     scheduleItem.forEach((field) => {
-        // Limpa o campo
         field.value = "";
     });
-    // Adicionar ao fieldset o elemento clonado
+}
+
+function addField() {
+    const newScheduleItem = document.querySelector(".schedule-item").cloneNode(true);
+    clearField(newScheduleItem);   
     scheduleItems.appendChild(newScheduleItem);
 }  
