@@ -67,6 +67,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
+E não esqueça de instalar o [NodeJS](https://nodejs.org/en/).
 
 ### 🧭 Rodando a aplicação web
 
@@ -76,6 +77,9 @@ $ git clone https://github.com/luizGTogni/nlw2-javascript-project/
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd nlw2-javascript-project
+
+# Instale as bibliotecas necessárias para o projeto
+$ npm install
 
 # Executando o servidor
 $ npm start
