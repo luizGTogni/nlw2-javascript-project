@@ -1,9 +1,18 @@
 const btnAddField = document.querySelector("#add-time");
+const btnDeleteField = document.querySelector("#delete-time");
 const scheduleItems = document.querySelector("#schedule-items");
 
-btnAddField.addEventListener("click", () => { 
-    checkLastField();
-});  
+function btnAddClicked() {
+    btnAddField.addEventListener("click", () => { 
+        checkLastField();
+    });
+}
+
+function btnDeleteClicked() {
+    btnDeleteField.addEventListener("click", () => {
+        checkDeleteField();
+    });
+}
 
 function checkLastField() {
     // Get last element do schedule items
@@ -43,3 +52,18 @@ function addField() {
     clearField(newScheduleItem);   
     scheduleItems.appendChild(newScheduleItem);
 }  
+
+function deleteField() {
+    const scheduleItemsElement = getLastElement();
+    scheduleItems.removeChild(scheduleItemsElement);
+}
+
+function checkDeleteField() {
+    const amountElementScheduleItems = scheduleItems.childElementCount; 
+    if (amountElementScheduleItems > 2) {
+        deleteField();
+    }
+}
+
+btnAddClicked();
+btnDeleteClicked();
