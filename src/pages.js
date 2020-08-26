@@ -2,10 +2,18 @@
 const Database = require("./database/db");
 
 // Importar os dados e a função
-const { subjects, weekdays, getSubject, convertHoursToMinutes } = require("./utils/format");
-const { queryAll, queryFilters } = require("./database/query");
+const { subjects, weekdays, getSubject, getTotalRegister, convertHoursToMinutes } = require("./utils/format");
+const { queryTotalRegister, queryAll, queryFilters } = require("./database/query");
 
-function pageLanding(req, res) {
+async function pageLanding(req, res) {
+    try {
+        const db = await Database;
+        const proffys = await db.all(queryTotalRegister);
+        const totalRegisterProffys = getTotalRegister(proffys); 
+        return res.render("index.html", { totalRegisterProffys });
+    } catch (err) {
+        console.log("Erro Landing: " + err);
+    }
     return res.render("index.html");
 }
 

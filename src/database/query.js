@@ -1,3 +1,8 @@
+const queryTotalRegister = 
+`
+    SELECT count(*) FROM proffys; 
+`
+
 // Pesquisa no banco de dados todos proffys
 const queryAll =
 `
@@ -30,6 +35,7 @@ function queryFilters(filters) {
 }
 
 module.exports = {
+    queryTotalRegister,
     queryAll,
-    queryFilters
+    queryFilters,
 }

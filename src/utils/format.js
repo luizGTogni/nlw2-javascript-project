@@ -30,6 +30,10 @@ function getSubject(subjectNumber) {
     return subjects[arrayPosition];
 }
 
+function getTotalRegister(query) {
+    return query[0]["count(*)"];
+}
+
 // Converter horas para minutos
 function convertHoursToMinutes(time) {
   const [ hour, minutes ] = time.split(":");
@@ -41,5 +45,6 @@ module.exports = {
     subjects,
     weekdays,
     getSubject,
-    convertHoursToMinutes
+    getTotalRegister,
+    convertHoursToMinutes,
 }
