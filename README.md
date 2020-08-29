@@ -58,10 +58,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 🚀 Como executar o projeto
 
-<h4 align="center">
-  <strong>:construction: Em construção... :construction:</strong>
-</h4>
-
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
